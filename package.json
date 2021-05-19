@@ -2,13 +2,14 @@
   "name": "stellar-lumens-nodejs-async",
   "version": "1.0.0",
   "main": "src/app.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon src/app.js --exec babel-node",
     "build": "npm run clean && babel src -d dist",
     "serve": "node dist/app.js",
     "clean": "rimraf ./dist"
   },
-  "author": "Michiel Mulders",
+  "author": "Nathan Rhoda",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
