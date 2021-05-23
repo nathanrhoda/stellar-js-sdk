@@ -63,9 +63,9 @@ const makePayment = async (req, res) => {
     .build()
 
     console.log("Transaction Prepared")      
-    const wallet1 = await readFile('src/wallets/wallet1.json').then(json => JSON.parse(json)).catch(() => null);
+    const wallet = await readFile('./wallets/wallet2.json').then(json => JSON.parse(json)).catch(() => null);
     
-    transaction.sign(Stellar.Keypair.fromSecret(wallet1.secret))
+    transaction.sign(Stellar.Keypair.fromSecret(wallet.secret))
 
     console.log("Transaction Signed")
   

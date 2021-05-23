@@ -1,0 +1,64 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Stellar Test",
+		"_postman_id": "32b2191d-de26-88eb-5b62-4ab3c7358a50",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Account & Deposit Funds",
+			"request": {
+				"url": "localhost:4000/",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"url": "localhost:4000/payment",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"srcAccount\": \"GC2DA23TW3GU76P6LETMA66NKPIZJJPBXIVHYA7SVDKQ4IW4ALIOYHRQ\",\r\n    \"desAccount\": \"GBDPVVTZD3KAXWU2FAHMAT4ILMBTXUZHWU2LOJ4YZVIE5KDF4BCNR6ZF\",\r\n    \"paymentAmount\": \"1000\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "History",
+			"request": {
+				"url": "localhost:4000/getHistory",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Key",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
