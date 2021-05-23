@@ -5,16 +5,19 @@ Next, we transfer a small amount from one account to another.
 
 ## Installation
 Execute in terminal inside the root of the project:
-`yarn install`
 `npm install`
 
 ## Start & Usage
 Again in terminal at root:
 `npm start`
 
-1. To create the accounts, execute a POST request to `http://localhost:4000/`.
-2. Next, let's tranfer money from `accountA` to `accountB` by sending a POST request to `http://localhost:4000/payment`.
-Watch your terminal to see the output logs.
-3. Retrieve history for `accountA` by sending GET request to `http://localhost:4000/getHistory`.
+## Postman collections included for easy execution of endpoints
+1. CreateKey : Create public and private key for wallet this is done seperately so you can store private public key so you can store private key
 
-If you have problems, create an issue on this repo. Thanks! :)
+2. Create Account & Deposit funds : Creates the account in stellar testnet and loads it with 10000 XLM
+
+3. Transactions: Requires you to enter sr and des public keys as well as amount. Please not that because you have to sign transactions you will need to have a private key on hand to sign it. So to get this working end to end you will need to add your wallet details in the wallets directory and reference it from the makepayment method on app.js line 66
+
+4. History: Gives you a summary of all transactions that has happened on the account with public key that you pass in
+
+
